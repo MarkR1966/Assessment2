@@ -1,3 +1,4 @@
+from random import randint
 	# INSTRUCTIONS
 
 	# In case it is not clear, the Question appears first, then examples, then any hints and finally the function that you need to complete appears underneath:
@@ -30,7 +31,11 @@
 	# How does a for loop iterate through a string?
 
 def one(input):
-	return ""
+	word=""
+	for char in input:
+		for i in range(3):
+			word += char
+	return word
 
 	# <QUESTION 2>
 
@@ -48,8 +53,16 @@ def one(input):
 	# Use your CLI to access the Python documentation and get help manipulating strings - help(range).
 
 def two(input):
-    return False
+	if input == 1 or input == 2:
+		return True
+	for i in range(2, input):
+		if input % i == 0:
+			break
+		else:
+			return True
+	return False
 
+print(two(3))
 	# <QUESTION 3>
 
     # Write a function which takes an integer input, a, and returns the sum a+aa+aaa+aaaa.
@@ -65,7 +78,12 @@ def two(input):
 	# What happens if you multiply a string by a number?
 
 def three(a):
-	return 1
+	b = str(a)
+	total = a
+	for i in range(3):
+		b += str(a)
+		total += int(b)
+	return total
 
 	# <QUESTION 4>
 
@@ -94,7 +112,10 @@ def three(a):
 	# How would you seperate a string into characters?
 
 def four(input1, input2):
-	return ""
+	s = ""
+	for i in range(len(input1)):
+		s += input1[i] + input2[i]
+	return s
 
 	# <QUESTION 5>
 
@@ -111,7 +132,12 @@ def four(input1, input2):
 	# The random module contains a function called randint.
 
 def five():
-    return []
+	list = []
+	while len(list) < 5:
+		a = randint(100, 200)
+		if a %2 == 0:
+			list.append(a)
+	return list
 
 	# <QUESTION 6>
 
@@ -130,7 +156,11 @@ def five():
 	# There are no hints for this question.
     
 def six(input):
-	return False
+	if input[-2:].lower() =="py":
+		return True
+	else:
+		return False
+
 
 	# <QUESTION 7>
 
@@ -154,6 +184,14 @@ def six(input):
 	# Use the cli to access the documentation help(list.sort)
 
 def seven(a, b, c):
+	list = [a, b, c]
+	list.sort()
+	if (list[1] - list[0]) == (list[2] - list[1]):
+		return True
+	else:
+		return False
+
+
 	return False
 
 	# <QUESTION 8>
