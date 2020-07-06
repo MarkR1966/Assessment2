@@ -263,4 +263,9 @@ def nine(string1, string2):
 	# Think about nesting for loops.
 
 def ten(X,Y):
-	return []
+	array = [[0 for x in range(X)] for y in range(Y)]
+	for index in range(Y):
+		for cell in range(X):
+			array[index] [cell] = cell * index
+	return array
+
