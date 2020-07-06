@@ -210,7 +210,12 @@ def seven(a, b, c):
     # Use the cli to access the documentation help(str.replace)
 
 def eight(input,  a):
-	return ""
+	if len(input) == a:
+		return ""
+	a_char = int(((len(input) - a) / 2))
+	b_char = a_char * -1
+	return input[:a_char] + input[b_char:]
+
 
 	# <QUESTION 9>
 
@@ -227,7 +232,20 @@ def eight(input,  a):
 	# There are no hints for this question.
 
 def nine(string1, string2):
-    return False
+	if len(string2) < len(string1):
+		a = string2
+		b = string1
+	else:
+		a = string1
+		b = string2
+	count = 0
+	for char in a:
+		if char in b:
+			count += 1
+	if count == len(a):
+		return True
+	else:
+		return False
 
 	# <QUESTION 10>
 

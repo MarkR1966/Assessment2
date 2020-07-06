@@ -60,20 +60,20 @@ def test_seven():
     assert python2.seven(4,60,9) == False
     assert python2.seven(2,2,2) == True
 
-# def test_eight():
-#     assert python2.eight("Hello", 3) == "Ho"
-#     assert python2.eight("Chocolate", 3) == "Choate"
-#     assert python2.eight("Chocolate", 1) == "Choclate"
-#     assert python2.eight("Water", 1) == "Waer"
-#     assert python2.eight("Water", 5) == ""
-#
-# def test_nine():
-#     assert python2.nine("god", "dog") == True
-#     assert python2.nine("tree", "tiredest") == True
-#     assert python2.nine("cat", "dog") == False
-#     assert python2.nine("tripping", "gin") == True
-#     assert python2.nine("computer", "python") == False
-#
+def test_eight():
+    assert python2.eight("Hello", 3) == "Ho"
+    assert python2.eight("Chocolate", 3) == "Choate"
+    assert python2.eight("Chocolate", 1) == "Choclate"
+    assert python2.eight("Water", 1) == "Waer"
+    assert python2.eight("Water", 5) == ""
+
+def test_nine():
+    assert python2.nine("god", "dog") == True
+    assert python2.nine("tree", "tiredest") == True
+    assert python2.nine("cat", "dog") == False
+    assert python2.nine("tripping", "gin") == True
+    assert python2.nine("computer", "python") == False
+
 # def test_ten():
 #     assert python2.ten(3,2) == [[0,0,0],[0,1,2]]
 #     assert python2.ten(2,1) == [[0,0]]
